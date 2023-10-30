@@ -1,24 +1,11 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An event signup web application.
 
-Things you may want to cover:
+Allows users to create and signup for events.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+Project from The Odin Project.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://www.theodinproject.com/lessons/ruby-on-rails-private-events
