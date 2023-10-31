@@ -1,5 +1,2 @@
 <h1>All Events</h1>
-<% @events.each do |event| %>
-  <h3><%= event.name %></h3>
-  <p>&nbsp;<%= event.time.to_fs(:long) %> @ <%= event.location %></p>
-<% end %>
+<%= render @events %>
