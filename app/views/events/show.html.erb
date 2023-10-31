@@ -1,0 +1,3 @@
+<h1><%= @event.name %></h1>
+<h3>Created by, <i><%= @event.creator.email %></i></h3>
+<p><%= @event.time.to_fs(:long) %> @ <%= @event.location %></p>
