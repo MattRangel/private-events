@@ -1,2 +1,4 @@
-<h1>Events created by <i><%= @user.email %></i></h1>
+<h1>Events created by <i><%= @user.email %></i>:</h1>
 <%= render @user.events %>
+<h2>Is attending:</h2>
+<p><%= @user.attended_events.pluck('name').join(', ') %></p>
