@@ -1,4 +1,8 @@
 <h1>Events created by <i><%= @user.email %></i>:</h1>
 <%= render @user.events %>
 <h2>Is attending:</h2>
-<p><%= @user.attended_events.pluck('name').join(', ') %></p>
+<% upcoming_event = @user.attended_events.group_by{ |event| event.time > Time.now } %>
+<h4>-Upcoming:</h4>
+<p><%= upcoming_event[true].pluck('name').join(', ') %></p>
+<h4>-Past:</h4>
+<p><%= upcoming_event[false].pluck('name').join(', ') %></p>
