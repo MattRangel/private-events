@@ -1,3 +1,11 @@
 <h1><%= @event.name %></h1>
 <h3>Created by, <i><%= @event.creator.email %></i></h3>
 <p><%= @event.time.to_fs(:long) %> @ <%= @event.location %></p>
+<%= form_with url: user_events_path, method: :post do |form| %>
+  <%= form.hidden_field :event_id, value: params[:id] %>
+  <% if current_user.nil? || current_user.attended_events.exclude?(@event) %>
+    <%= form.button "Attend Event!" %>
+  <% else %>
+    <%= form.button "Unattend Event", formmethod: :delete %>
+  <% end %>
+<% end %>
