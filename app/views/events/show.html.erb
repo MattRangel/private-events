@@ -9,3 +9,4 @@
     <%= form.button "Unattend Event", formmethod: :delete %>
   <% end %>
 <% end %>
+<p>Attendees: <%= @event.attendees.pluck('email').join(', ') %>.</p>
