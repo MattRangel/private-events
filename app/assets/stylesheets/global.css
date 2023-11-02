@@ -1,0 +1,16 @@
+body, html {
+  margin-top: 0;
+}
+#header {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  border-bottom: black 4px solid;
+}
+
+#header > #home {
+  margin-right: auto;
+}
+
+#header > #user_account {
+}
