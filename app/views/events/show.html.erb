@@ -14,7 +14,7 @@
   <div class="inline-div">
     <%= button_to "Edit Event", edit_event_path, method: :get %>
     <%= form_with url: event_path, method: :patch do |form| %>
-      <%= form.button "Delete Event", formmethod: :delete %>
+      <%= form.button "Delete Event", formmethod: :delete, data: { turbo_confirm: "Are you sure you want to delete this Event?" } %>
     <% end %>
   </div>
 <% end %>
