@@ -9,4 +9,13 @@
     <%= form.button "Unattend Event", formmethod: :delete %>
   <% end %>
 <% end %>
+<% if current_user.eql?(@event.creator) %>
+  <br>
+  <div class="inline-div">
+    <%= button_to "Edit Event", edit_event_path, method: :get %>
+    <%= form_with url: event_path, method: :patch do |form| %>
+      <%= form.button "Delete Event", formmethod: :delete %>
+    <% end %>
+  </div>
+<% end %>
 <p>Attendees: <%= @event.attendees.pluck('email').join(', ') %>.</p>

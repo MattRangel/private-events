@@ -12,5 +12,6 @@ body, html {
   margin-right: auto;
 }
 
-#header > #user_account {
+.inline-div > *{
+  display: inline;
 }
